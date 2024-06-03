@@ -2,65 +2,49 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #b7410e, #0077b6);
+    color: #fff;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    background-color: #0077b6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
     z-index: 1000;
 }
 
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
-
-#nav-menu {
-    display: none;
-}
-
-#nav-menu ul {
-    list-style: none;
+header nav ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-#nav-menu ul li {
-    margin: 10px 0;
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-#nav-menu ul li a {
-    color: #ffffff;
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-weight: bold;
 }
 
-.show {
-    display: flex;
+header nav ul li a:hover {
+    text-decoration: underline;
 }
 
-#problema {
-    background-color: #0077b6;
-    color: #ffffff;
-    padding: 20px;
-    padding-top: 80px; /* Para dar espaço ao cabeçalho fixo */
+main {
+    padding-top: 100px;
+}
+
+section {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 40px 20px;
 }
 
 .container {
@@ -69,24 +53,39 @@ header {
     text-align: center;
 }
 
-#problema img {
-    width: 80%;
-    height: auto;
-    margin-top: 20px;
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-    }
-    #nav-menu {
-        display: flex;
-        flex-direction: row;
-    }
-    #nav-menu ul {
-        flex-direction: row;
-    }
-    #nav-menu ul li {
-        margin: 0 15px;
-    }
+.text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.image {
+    flex: 1;
+    min-width: 300px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
