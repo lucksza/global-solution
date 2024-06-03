@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
-        if (username === 'Lucca' && password === '123') {
+        if (username === 'admin' && password === 'admin') {
             alert('Login bem-sucedido!');
             loginModal.style.display = 'none';
         } else {
