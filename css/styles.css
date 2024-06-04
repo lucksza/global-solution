@@ -186,3 +186,9 @@ p {
 #login-form button:hover {
     background-color: #4682B4;
 }
+.footer {
+    background-color: #1E90FF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
