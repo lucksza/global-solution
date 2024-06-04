@@ -50,3 +50,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', function() {
+        navUl.classList.toggle('active');
+    });
+
+    navUl.querySelectorAll('li a').forEach(link => {
+        link.addEventListener('click', function() {
+            navUl.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navUl.contains(event.target) && navUl.classList.contains('active')) {
+            navUl.classList.remove('active');
+        }
+    });
+});
+
