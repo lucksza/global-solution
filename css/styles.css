@@ -190,5 +190,21 @@ p {
     background-color: #1E90FF;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    font-size: 0.8em;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
