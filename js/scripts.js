@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
-        if (username === 'admin' && password === 'admin') {
+        if (username === 'user' && password === '123') {
             alert('Login bem-sucedido!');
             loginModal.style.display = 'none';
         } else {
@@ -143,6 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
 
-    // Adjust carousel on window resize
+
     window.addEventListener('resize', updateCarousel);
 });
