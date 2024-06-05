@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     loginButton.addEventListener('click', () => {
-        //loginModal.style.display = 'block';
+
     fadeInModal(loginModal);
     });
 
