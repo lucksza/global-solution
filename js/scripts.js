@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     loginButton.addEventListener('click', () => {
-        loginModal.style.display = 'block';
+        //loginModal.style.display = 'block';
+    fadeInModal(loginModal);
     });
 
     closeButton.addEventListener('click', () => {
@@ -145,4 +146,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     window.addEventListener('resize', updateCarousel);
+});
+
+function fadeInModal(modal, duration = 500) {
+    modal.style.display = 'block';
+    modal.style.opacity = 0;
+    modal.style.visibility = 'visible';
+    let start = null;
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        let progress = timestamp - start;
+        modal.style.opacity = Math.min(progress / duration, 1);
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+        }
+    }
+
+    window.requestAnimationFrame(step);
+}
+
+document.getElementById('login-button').addEventListener('click', () => {
+    fadeInModal(document.getElementById('login-modal'));
 });
